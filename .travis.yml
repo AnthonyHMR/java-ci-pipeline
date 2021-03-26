@@ -1,3 +1,4 @@
 language: java
+os: windows
 rvm:
   11.0.10
