@@ -1,4 +1,4 @@
-language: java
+language: shell
 os: windows
 rvm:
   11.0.10
