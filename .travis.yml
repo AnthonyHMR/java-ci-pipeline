@@ -2,11 +2,3 @@ language: shell
 os: windows
 rvm:
   11.0.10
-addons:
-  sonarcloud:
-    organization: 6516a9096db751bb994a147727cc516b44681c81
-    token:
-      secure: ••••••••••••••••
-script:
-  # other script steps might be done before running the actual analysis
-  - sonar-scanne
