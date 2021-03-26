@@ -2,3 +2,12 @@ language: shell
 os: windows
 rvm:
   11.0.10
+addons:
+  sonarcloud:
+    organization: "anthonyhmr"
+    token:
+      secure: "iB9ZTDFtKcIgW+cxrUBOVJ7s9YlIixK3M64Lg0sQDkBIfb/jSPbzfh3UUa9i9xmm1gob9w63S8mYXq8dyN+bhLJK+cxRvzDhpQMqTvkNhSvDwmvi93aHnMYqyrcTRftPCeMlpitrx3XmqNzhr61JTU5e1c0UHQBqzfvN+h3blPAZpsyH6kpA1MsduBC4vEfwD7SU40VV+OWLVIGv3Q1+Y9CIR/K7oFeWNJz4wcqgTbYYWi2ysOpV06jUvGnrjiOu0/6IRQ0BW7LOHPwac+YQRaCduxrH6zD8X1/jtNtnCLPNRef7Wuf0P4Q2c+u+n1dFFLXL2A/Rkp0ogbG/BmRz3C+VPjGuBZ6ccQ49MCeRrGyURbJJzcDffk25rUkGZQ64zLlk+mBjXjywhaCTyDJg4M0AKH5046t9dABS15jqW9ICEUGdIjf7qW/OWsXiJ472u/yWs0nYFP9QWhn8SaHKeJ/vYRgB1KKfzpkEg4fbxhI58CqUG8JBtSrWLAwWK1RDQWVJoK4Tx59C+a9k9PHr4FNvMNrU9lsxZBKRL4YxKGJ/xrWaR/NAPSY3DIcTD8oZMMRjriq7W5yS8lkDxmOcZlfAfJaD6ZlPJSeOj4vYGu/wtXWbXoQ6mKYIFoO9W1bN1F15g/q5WmrXkRMXuYphXjcbaFFGO6faa+6UBEC9Hiw="
+
+script:
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+  - sonar-scanner
